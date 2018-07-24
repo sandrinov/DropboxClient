@@ -14,6 +14,9 @@ namespace DropBoxClient.Models
     public class FileUploadViewModel
     {
         [Required]
+        [RegularExpression(@"^\/[a-zA-Z0-9]+$", ErrorMessage =@"Must be in the form: /DirectoryName")]
+        public String Dir { get; set; }
+        [Required]
         public HttpPostedFileBase File { get; set; }
     }
     public class DirViewModel

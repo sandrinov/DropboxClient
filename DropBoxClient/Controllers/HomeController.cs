@@ -102,7 +102,7 @@ namespace DropBoxClient.Controllers
 
         // Get /Home/Profile
         [Authorize]
-        public async Task<ActionResult> ProfileAsync()
+        public new async Task<ActionResult> Profile()
         {
             await Task.Delay(0);
 
@@ -111,7 +111,7 @@ namespace DropBoxClient.Controllers
 
         // Post /Home/Profile
         [HttpPost, ValidateAntiForgeryToken, Authorize]
-        public async Task<ActionResult> ProfileAsync(UserProfile profile)
+        public new async Task<ActionResult> Profile(UserProfile profile)
         {
             if (this.currentUser.ID != profile.ID)
             {
@@ -163,7 +163,7 @@ namespace DropBoxClient.Controllers
 
         // GET: /Home/Auth
         [Authorize]
-        public async Task<ActionResult> AuthAsync(string code, string state)
+        public async Task<ActionResult> Auth(string code, string state)
         {
             try
             {

@@ -13,7 +13,7 @@ namespace DropBoxClient.Controllers
 {
     public class DBManagerController : Controller
     {
-        private string accessToken = "hgGYAs6v7eAAAAAAAAAAIaVH2IOaRpYYNwMIwRkcVIsWVIXdy-Kk4NkWBB3a0D0N";
+        private string accessToken = "";
         // GET: DBManager
         public async Task<ActionResult> Index()
         {

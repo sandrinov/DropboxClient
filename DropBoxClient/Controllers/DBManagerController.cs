@@ -67,7 +67,7 @@ namespace DropBoxClient.Controllers
 
                         foreach (var item in listFolderResult.Entries.Where(i => i.IsFile))
                         {
-                            resultList.Add(new FileViewModel() { Name = item.Name, Size = item.AsFile.Size });
+                            resultList.Add(new FileViewModel() { Name = item.Name, Size = item.AsFile.Size, LastUpdate=item.AsFile.ServerModified.ToLongDateString() });
                         }
                     }
                 }
